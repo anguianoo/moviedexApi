@@ -19,7 +19,7 @@ app.use(function validateBearerToken(req, res, next) {
 });
 
 app.get("/movie", function handleGetMovies(req, res) {
-  let response = movieData.movies;
+  let response = movieData[movies];
   //Users can search for Movies by genre, country or avg_vote
   if (req.query.genre) {
     response = response.filter((array) =>
